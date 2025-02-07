@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Час створення: Лют 07 2025 р., 22:21
+-- Час створення: Лют 07 2025 р., 23:18
 -- Версія сервера: 10.4.32-MariaDB
 -- Версія PHP: 8.2.12
 
@@ -68,16 +68,18 @@ CREATE TABLE `users` (
   `balance_usd` decimal(10,2) DEFAULT 0.00,
   `balance_y` decimal(10,2) DEFAULT 0.00,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `last_reward_claim` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп даних таблиці `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `email`, `balance_usd`, `balance_y`, `created_at`, `updated_at`) VALUES
-(3, 'iurii', '$2y$10$BcBr.2hX8urTGAn7.DiCtOeX3TEGEwTqiLC773jxGFh9CRXb373ey', 'iurii@gmail.com', 92217668.50, 99898999.99, '2025-02-07 17:49:10', '2025-02-07 21:20:30'),
-(4, 'test', '$2y$10$kbTalJEsoTZB5DaFx0PlGOZwsLxz1vZspnd/o/gJdMl3.HYI8MZzO', 'test@gmail.com', 9790.00, 20919.80, '2025-02-07 20:01:43', '2025-02-07 20:07:33');
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `balance_usd`, `balance_y`, `created_at`, `updated_at`, `last_reward_claim`) VALUES
+(3, 'iurii', '$2y$10$BcBr.2hX8urTGAn7.DiCtOeX3TEGEwTqiLC773jxGFh9CRXb373ey', 'iurii@gmail.com', 86977705.58, 99949603.20, '2025-02-07 17:49:10', '2025-02-07 21:47:41', NULL),
+(4, 'test', '$2y$10$kbTalJEsoTZB5DaFx0PlGOZwsLxz1vZspnd/o/gJdMl3.HYI8MZzO', 'test@gmail.com', 9790.00, 20919.80, '2025-02-07 20:01:43', '2025-02-07 20:07:33', NULL),
+(5, 'test2', '$2y$10$0bNCZ9rFv35gs6MVR5jec.tRNGmueUEx7yUjogOv0KkOUYEjj2pfS', 'test2@gmail.com', 100.00, 190101.00, '2025-02-07 21:56:09', '2025-02-07 22:17:14', '2025-02-07 22:17:14');
 
 --
 -- Індекси збережених таблиць
@@ -125,7 +127,7 @@ ALTER TABLE `transactions`
 -- AUTO_INCREMENT для таблиці `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Обмеження зовнішнього ключа збережених таблиць

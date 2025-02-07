@@ -144,6 +144,7 @@ try {
     $conn->commit(); // Завершуємо транзакцію
 
     echo json_encode(['success' => true, 'message' => 'Операція успішна']);
+    header('Location: currency.php');
     exit;
 
 } catch (Exception $e) {

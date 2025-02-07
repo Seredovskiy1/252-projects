@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Підготовка та виконання SQL-запиту для вставки нового користувача
     $sql = "INSERT INTO users (username, password, email, balance_usd, balance_y, created_at, updated_at) 
-            VALUES (?, ?, ?, 0, 0, NOW(), NOW())";
+            VALUES (?, ?, ?, 100, 50000, NOW(), NOW())";
     $stmt = $pdo->prepare($sql);
 
     if ($stmt->execute([$username, $hashed_password, $email])) {

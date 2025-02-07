@@ -34,7 +34,7 @@ $isAuthorized = isset($_SESSION['user_id']);
                 <p class="text-3xl font-bold" id="change1m">Завантаження...</p>
             </div>
             <div class="bg-gray-800 rounded-lg p-4">
-                <h2 class="text-2xl font-bold mb-4">Об'єм торгів</h2>
+                <h2 class="text-2xl font-bold mb-4">Об'єм торгів за свічку</h2>
                 <p class="text-3xl font-bold" id="volume">Завантаження...</p>
             </div>
         </div>
@@ -47,8 +47,8 @@ $isAuthorized = isset($_SESSION['user_id']);
                         <div class="flex-1">
                             <label for="tradeType" class="block text-sm font-medium text-gray-400 mb-1">Операція</label>
                             <select id="tradeType" name="tradeType" class="w-full px-3 py-2 text-sm rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                                <option value="sell">Купити Y</option>
-                                <option value="buy">Купити $</option>
+                                <option value="sell">Купити Y за $</option>
+                                <option value="buy">Купити $ за Y-франк</option>
                             </select>
                         </div>
                     </div>
