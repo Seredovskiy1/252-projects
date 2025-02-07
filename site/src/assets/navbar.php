@@ -6,6 +6,7 @@
                 <a href="../political_parties.php" class="hover:text-gray-300">Партія</a>
                 <a href="../elections.php" class="hover:text-gray-300">Вибори</a>
                 <a href="../news.php" class="hover:text-gray-300">Новини</a>
+                <a href="../currency.php" class="hover:text-gray-300">Курс</a>
                 <a href="#contact" class="hover:text-gray-300">Вхід</a>
             </div>
         </nav>
