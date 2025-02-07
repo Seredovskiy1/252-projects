@@ -7,7 +7,7 @@
                 <a href="../elections.php" class="hover:text-gray-300">Вибори</a>
                 <a href="../news.php" class="hover:text-gray-300">Новини</a>
                 <a href="../currency.php" class="hover:text-gray-300">Курс</a>
-                <a href="#contact" class="hover:text-gray-300">Вхід</a>
+                <a href="../auth/login.php" class="hover:text-gray-300">Вхід</a>
             </div>
         </nav>
     </header>

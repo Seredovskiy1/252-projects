@@ -1,0 +1,882 @@
+[
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 3,
+        "yfrank_amount": 299.97,
+        "rate": 99.98835922141811,
+        "timestamp": 1738956525000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 3,
+        "yfrank_amount": 299.97,
+        "rate": 100.08849771562451,
+        "timestamp": 1738956563000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 3,
+        "yfrank_amount": 0,
+        "rate": 100.18873634832512,
+        "timestamp": 1738956612000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 3,
+        "yfrank_amount": 300.6,
+        "rate": 100.2,
+        "time": 1738956967000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 5,
+        "yfrank_amount": 501,
+        "rate": 100.2001503,
+        "time": 1738956993000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 10,
+        "yfrank_amount": 1000.9,
+        "rate": 100.09020841523223,
+        "time": 1738957143000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 3,
+        "yfrank_amount": 300.27,
+        "rate": 100.09070886523223,
+        "time": 1738957182000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 20,
+        "yfrank_amount": 2001.8,
+        "rate": 100.09085900023223,
+        "time": 1738957203000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 30,
+        "yfrank_amount": 3006,
+        "rate": 100.2,
+        "time": 1738957359000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 700,
+        "yfrank_amount": 70140,
+        "rate": 100.201503,
+        "time": 1738957402000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 5000,
+        "yfrank_amount": 501200,
+        "rate": 100.236573,
+        "time": 1738957450000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 100,
+        "yfrank_amount": 10049,
+        "rate": 100.54746530380001,
+        "time": 1738957556000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 5100,
+        "yfrank_amount": 512754,
+        "rate": 100.5424408038,
+        "time": 1738957585000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 30,
+        "yfrank_amount": 3006,
+        "rate": 100.2,
+        "time": 1738957765000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 1000,
+        "yfrank_amount": 100200,
+        "rate": 100.201503,
+        "time": 1738957798000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 1000,
+        "yfrank_amount": 100250,
+        "rate": 100.3117539618,
+        "time": 1738957865000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 300,
+        "yfrank_amount": 30078,
+        "rate": 100.2616289618,
+        "time": 1738957908000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 100,
+        "yfrank_amount": 10028,
+        "rate": 100.2766679618,
+        "time": 1738957924000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 100,
+        "yfrank_amount": 10027,
+        "rate": 100.2716539618,
+        "time": 1738957944000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 300,
+        "yfrank_amount": 30012,
+        "rate": 100.04,
+        "time": 1738958160000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 390,
+        "yfrank_amount": 39007.8,
+        "rate": 100.024994,
+        "time": 1738958181000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 300,
+        "yfrank_amount": 30012,
+        "rate": 100.04449790000001,
+        "time": 1738958209000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 300,
+        "yfrank_amount": 30009,
+        "rate": 100.02949190000001,
+        "time": 1738958223000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 100,
+        "yfrank_amount": 9991,
+        "rate": 99.9144729126,
+        "time": 1738958336000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 30,
+        "yfrank_amount": 2998.8,
+        "rate": 99.95943619996504,
+        "time": 1738958416000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 10,
+        "yfrank_amount": 999.6,
+        "rate": 99.96093559996504,
+        "time": 1738958429000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 30,
+        "yfrank_amount": 2998.8,
+        "rate": 99.96143539996504,
+        "time": 1738958477000
+    },
+    {
+        "user_id": 4,
+        "type": "buy",
+        "usd_amount": 300,
+        "yfrank_amount": 29988,
+        "rate": 99.96293479996504,
+        "time": 1738958536000
+    },
+    {
+        "user_id": 4,
+        "type": "buy",
+        "usd_amount": 10,
+        "yfrank_amount": 999.8,
+        "rate": 99.97792879996504,
+        "time": 1738958544000
+    },
+    {
+        "user_id": 4,
+        "type": "sell",
+        "usd_amount": 100,
+        "yfrank_amount": 9998,
+        "rate": 99.97842869996504,
+        "time": 1738958552000
+    },
+    {
+        "user_id": 4,
+        "type": "buy",
+        "usd_amount": 1000,
+        "yfrank_amount": 99890,
+        "rate": 99.89344195859638,
+        "time": 1738958682000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 1000,
+        "yfrank_amount": 99910,
+        "rate": 99.91337595836043,
+        "time": 1738958846000
+    },
+    {
+        "user_id": 4,
+        "type": "sell",
+        "usd_amount": 1000,
+        "yfrank_amount": 99960,
+        "rate": 99.96333095836043,
+        "time": 1738958853000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 10,
+        "yfrank_amount": 999.1,
+        "rate": 99.91335095836043,
+        "time": 1738958898000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 30,
+        "yfrank_amount": 2997.3,
+        "rate": 99.91385050836043,
+        "time": 1738958904000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 100,
+        "yfrank_amount": 9992,
+        "rate": 99.91534915836043,
+        "time": 1738958934000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 1000,
+        "yfrank_amount": 99900,
+        "rate": 99.90036212304459,
+        "time": 1738959001000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 3000,
+        "yfrank_amount": 299550,
+        "rate": 99.85041212304459,
+        "time": 1738959022000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 300,
+        "yfrank_amount": 30000,
+        "rate": 100.0001871230446,
+        "time": 1738959040000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 100,
+        "yfrank_amount": 9999,
+        "rate": 99.95519156690769,
+        "time": 1738959104000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 1,
+        "yfrank_amount": 99.95,
+        "rate": 99.95019206690769,
+        "time": 1738959106000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 30,
+        "yfrank_amount": 2998.5,
+        "rate": 99.9501420919077,
+        "time": 1738959112000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 0,
+        "yfrank_amount": 0,
+        "rate": 0,
+        "time": 1738959768000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 0,
+        "yfrank_amount": 0,
+        "rate": 100.01,
+        "time": 1738959817000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 0,
+        "yfrank_amount": 0,
+        "rate": 100.00799915994882,
+        "time": 1738960145000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 100,
+        "yfrank_amount": 10005,
+        "rate": 100.04991396399998,
+        "time": 1738960605000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 300,
+        "yfrank_amount": 30012,
+        "rate": 100.04491146399998,
+        "time": 1738960617000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 1000,
+        "yfrank_amount": 100030,
+        "rate": 100.02990546399998,
+        "time": 1738960625000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 0,
+        "yfrank_amount": 0,
+        "rate": 99.73005187425076,
+        "time": 1738961103000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 0,
+        "yfrank_amount": 0,
+        "rate": 99.73005187425076,
+        "time": 1738961113000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 0,
+        "yfrank_amount": 0,
+        "rate": 99.73005187425076,
+        "time": 1738961147000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 99.6402858599374,
+        "yfrank_amount": 1,
+        "rate": 99.6402858599374,
+        "time": 1738961355000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 30030,
+        "yfrank_amount": 300,
+        "rate": 100.1,
+        "time": 1738961386000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 30000,
+        "yfrank_amount": 299.7007488023209,
+        "rate": 100.09984999999999,
+        "time": 1738961404000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 30029.99995511232,
+        "yfrank_amount": 300,
+        "rate": 100.09999985037439,
+        "time": 1738961421000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 10000.975998550904,
+        "yfrank_amount": 100,
+        "rate": 100.00975998550905,
+        "time": 1738961492000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 10010,
+        "yfrank_amount": 100,
+        "rate": 100.1,
+        "timestamp": 1738961689000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 1000,
+        "yfrank_amount": 9.991009090919082,
+        "rate": 100.08999,
+        "timestamp": 1738961705000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 10009.099,
+        "yfrank_amount": 100,
+        "rate": 100.09099,
+        "timestamp": 1738961713000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 30000,
+        "yfrank_amount": 299.5775073705768,
+        "rate": 100.1410294895406,
+        "timestamp": 1738961722000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 100171.0294895406,
+        "yfrank_amount": 1000,
+        "rate": 100.1710294895406,
+        "timestamp": 1738961738000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 30,
+        "yfrank_amount": 0.2997875751408308,
+        "rate": 100.07085846005106,
+        "timestamp": 1738961767000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 100070.88846005106,
+        "yfrank_amount": 1000,
+        "rate": 100.07088846005107,
+        "timestamp": 1738961775000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 3000,
+        "yfrank_amount": 30.008757284110864,
+        "rate": 99.97081757159101,
+        "timestamp": 1738961804000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 99.97381757159103,
+        "yfrank_amount": 1,
+        "rate": 99.97381757159103,
+        "timestamp": 1738961813000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 1199.6846111732816,
+        "yfrank_amount": 12,
+        "rate": 99.97371759777346,
+        "timestamp": 1738961818000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 9997.251791316228,
+        "yfrank_amount": 100,
+        "rate": 99.97251791316228,
+        "timestamp": 1738961822000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 14510512.126966065,
+        "yfrank_amount": 145000,
+        "rate": 100.07249742735218,
+        "timestamp": 1738961945000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 3000,
+        "yfrank_amount": 35.06580661341271,
+        "rate": 85.55342910185607,
+        "timestamp": 1738962019000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 2906.0096708736437,
+        "yfrank_amount": 34,
+        "rate": 85.47087267275423,
+        "timestamp": 1738962036000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 100,
+        "yfrank_amount": 1.1700290050680888,
+        "rate": 85.46796666308336,
+        "timestamp": 1738962044000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 300,
+        "yfrank_amount": 3.5100829083054537,
+        "rate": 85.46806666308335,
+        "timestamp": 1738962049000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 85468.36666308335,
+        "yfrank_amount": 1000,
+        "rate": 85.46836666308334,
+        "timestamp": 1738962061000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 1000,
+        "yfrank_amount": 11.711947239461718,
+        "rate": 85.38289829642027,
+        "timestamp": 1738962069000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 1000,
+        "yfrank_amount": 11.711810071360086,
+        "rate": 85.38389829642026,
+        "timestamp": 1738962074000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 85384.89829642024,
+        "yfrank_amount": 1000,
+        "rate": 85.38489829642025,
+        "timestamp": 1738962078000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 25612.884888054636,
+        "yfrank_amount": 300,
+        "rate": 85.37628296018212,
+        "timestamp": 1738962115000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 75000,
+        "yfrank_amount": 878.7277233305492,
+        "rate": 85.35067007529408,
+        "timestamp": 1738962143000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 5977.405225700353,
+        "yfrank_amount": 70,
+        "rate": 85.39150322429076,
+        "timestamp": 1738962243000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 300,
+        "yfrank_amount": 3.518400227249538,
+        "rate": 85.26602450640499,
+        "timestamp": 1738962375000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 85.31748430110882,
+        "yfrank_amount": 1,
+        "rate": 85.31748430110882,
+        "timestamp": 1738962405000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 830,
+        "yfrank_amount": 9.728379086653907,
+        "rate": 85.31739898362451,
+        "timestamp": 1738962457000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 12370902.502625555,
+        "yfrank_amount": 145000,
+        "rate": 85.31656898362452,
+        "timestamp": 1738962512000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 1000,
+        "yfrank_amount": 10.233657139070491,
+        "rate": 97.71677772769594,
+        "timestamp": 1738962542000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 29338.18510496343,
+        "yfrank_amount": 300,
+        "rate": 97.7939503498781,
+        "time": 1738962587000
+    },
+    {
+        "user_id": 3,
+        "type": "buy",
+        "usd_amount": 3,
+        "yfrank_amount": 0.029975725387499916,
+        "rate": 100.080980901,
+        "time": 1738962654000
+    },
+    {
+        "user_id": 3,
+        "type": "sell",
+        "usd_amount": 30024.29427479636,
+        "yfrank_amount": 300,
+        "rate": 100.08098091598787,
+        "time": 1738962717000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 100.08083091598786,
+        "yfrank_amount": 1,
+        "rate": 100.08083091598786,
+        "timestamp": 1738962738000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 100.08073083515694,
+        "yfrank_amount": 1,
+        "rate": 100.08073083515694,
+        "timestamp": 1738962749000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 300.24294270300004,
+        "yfrank_amount": 3,
+        "rate": 100.080980901,
+        "timestamp": 1738962779000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 100.0806806580573,
+        "yfrank_amount": 1,
+        "rate": 100.0806806580573,
+        "timestamp": 1738962782000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 3009000,
+        "yfrank_amount": 30065.772826663528,
+        "rate": 100.08058057737664,
+        "timestamp": 1738962816000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 10313.08164096076,
+        "yfrank_amount": 100,
+        "rate": 103.13081640960759,
+        "timestamp": 1738962867000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 1000000,
+        "yfrank_amount": 9697.392542970614,
+        "rate": 103.12050332796663,
+        "timestamp": 1738962895000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 4000000,
+        "yfrank_amount": 38432.39815746528,
+        "rate": 104.07885512663545,
+        "timestamp": 1738962950000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 43240.188359064305,
+        "yfrank_amount": 400,
+        "rate": 108.10047089766077,
+        "timestamp": 1738962995000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 108068.03643237264,
+        "yfrank_amount": 1000,
+        "rate": 108.06803643237264,
+        "timestamp": 1738963032000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 1000000,
+        "yfrank_amount": 9262.69259669035,
+        "rate": 107.95996839594027,
+        "timestamp": 1738963039000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 1089.5996839594027,
+        "yfrank_amount": 10,
+        "rate": 108.95996839594027,
+        "timestamp": 1738963055000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 108904.3993568582,
+        "yfrank_amount": 1000,
+        "rate": 108.90439935685819,
+        "timestamp": 1738963120000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 1000000,
+        "yfrank_amount": 9191.557062088177,
+        "rate": 108.79549495750133,
+        "timestamp": 1738963132000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 10979549.495750133,
+        "yfrank_amount": 100000,
+        "rate": 109.79549495750133,
+        "timestamp": 1738963140000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 10000000,
+        "yfrank_amount": 101178.0067801907,
+        "rate": 98.83570865084354,
+        "timestamp": 1738963155000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 1088357.0865084352,
+        "yfrank_amount": 10000,
+        "rate": 108.83570865084353,
+        "timestamp": 1738963167000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 10000000,
+        "yfrank_amount": 92809.70580542836,
+        "rate": 107.74735156433509,
+        "timestamp": 1738963173000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 1177473.5156433508,
+        "yfrank_amount": 10000,
+        "rate": 117.74735156433508,
+        "timestamp": 1738963188000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 1000000,
+        "yfrank_amount": 8578.545476236115,
+        "rate": 116.56987804869172,
+        "timestamp": 1738963198000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "buy",
+        "usd_amount": 1000000,
+        "yfrank_amount": 8514.094065713287,
+        "rate": 117.45230817064302,
+        "timestamp": 1738963214000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 118452.30817064304,
+        "yfrank_amount": 1000,
+        "rate": 118.45230817064304,
+        "timestamp": 1738963223000
+    },
+    {
+        "user_id": 3,
+        "trade_type": "sell",
+        "usd_amount": 11833385.58624724,
+        "yfrank_amount": 100000,
+        "rate": 118.33385586247239,
+        "timestamp": 1738963230000
+    }
+]
