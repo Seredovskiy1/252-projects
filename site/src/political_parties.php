@@ -24,7 +24,7 @@
                 <div class="space-y-4">
                     <div>
                         <h4 class="text-lg font-medium text-blue-400">Партія Ярих Нациків</h4>
-                        <p class="text-gray-300">Місць у раді: 8</p>
+                        <p class="text-gray-300">Місць у раді: 1</p>
                         <p class="text-gray-400">Фокус на Автократію, Диктатуру.</p>
                         <p class="text-gray-300 mt-2">Голова партії: Костянтин (farsh228)</p>
                         <p class="text-gray-400">Депутати: пусто</p>
@@ -83,10 +83,10 @@
         new Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: ['Ліва сторона', 'Майже Ліва сторона', 'Центр', 'Майже Права сторона', 'Права сторона'],
+                labels: ['Ліва сторона', 'Центр', 'Права сторона'],
                 datasets: [{
-                    data: [2, 2, 2, 2, 2],
-                    backgroundColor: ['#4ade80', '#3B82F6', '#3B82F6', '#3B82F6', '#3B82F6'],
+                    data: [2, 4, 1],
+                    backgroundColor: ['#4ade80', '#fff', '#3B82F6'],
                     borderWidth: 0
                 }]
             },

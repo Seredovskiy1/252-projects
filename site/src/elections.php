@@ -1,3 +1,33 @@
+<?php
+session_start();
+require_once 'config/db.php';
+
+$isAuthorized = isset($_SESSION['user_id']);
+$hasVoted = false;
+$voteResults = [
+    'blue' => 0,
+    'red' => 0
+];
+
+// Отримання результатів голосування (перенесено за межі перевірки авторизації)
+$stmt = $pdo->query("SELECT vote, COUNT(*) as count FROM votes GROUP BY vote");
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $voteResults[$row['vote']] = $row['count'];
+}
+
+if ($isAuthorized) {
+    // Перевірка, чи користувач вже голосував
+    $stmt = $pdo->prepare("SELECT vote FROM votes WHERE user_id = ?");
+    $stmt->execute([$_SESSION['user_id']]);
+    $vote = $stmt->fetch(PDO::FETCH_ASSOC);
+    $hasVoted = $vote !== false;
+}
+
+$totalVotes = array_sum($voteResults);
+$bluePercentage = $totalVotes > 0 ? ($voteResults['blue'] / $totalVotes) * 100 : 0;
+$redPercentage = $totalVotes > 0 ? ($voteResults['red'] / $totalVotes) * 100 : 0;
+?>
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -18,7 +48,36 @@
             <p class="text-xl mb-2">Дата виборів: <span class="font-bold text-yellow-400">9 лютого 2025 року</span></p>
             <p class="text-gray-300">До виборів залишилось:</p>
             <div id="countdown" class="text-3xl font-bold text-green-400 my-4"></div>
-            <p class="text-gray-300">Не забудьте взяти участь у голосуванні та зробити свій вибір!</p>
+            <div id="votingSection" class="hidden">
+                <?php if ($isAuthorized): ?>
+                    <?php if (!$hasVoted): ?>
+                        <h3 class="text-xl font-semibold mb-4">Проголосуйте за свого кандидата:</h3>
+                        <div class="flex space-x-4">
+                            <button onclick="vote('blue')" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                                Голосувати за Ліберал-Демократичну Партію
+                            </button>
+                            <button onclick="vote('red')" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                                Голосувати за Партію Ярих Нациків
+                            </button>
+                        </div>
+                    <?php else: ?>
+                        <p class="text-xl font-semibold mb-4">Ви вже проголосували. Дякуємо за участь!</p>
+                    <?php endif; ?>
+                <?php else: ?>
+                    <p class="text-xl font-semibold mb-4">Увійдіть в систему, щоб проголосувати.</p>
+                <?php endif; ?>
+            </div>
+            <div id="results" class="mt-8">
+                <h3 class="text-xl font-semibold mb-4">Результати голосування:</h3>
+                <div class="flex w-full h-8 bg-gray-700 rounded-full overflow-hidden">
+                    <div id="blueProgress" class="bg-green-400 h-full" style="width: <?php echo $bluePercentage; ?>%"></div>
+                    <div id="redProgress" class="bg-blue-500 h-full" style="width: <?php echo $redPercentage; ?>%"></div>
+                </div>
+                <div class="flex justify-between mt-2">
+                    <p class="text-green-400">Ліберал-Демократична Партія: <span id="bluePercentage"><?php echo number_format($bluePercentage, 2); ?>%</span></p>
+                    <p class="text-blue-400">Партія Ярих Нациків: <span id="redPercentage"><?php echo number_format($redPercentage, 2); ?>%</span></p>
+                </div>
+            </div>
         </section>
 
         <section class="mb-12">
@@ -49,22 +108,51 @@
     <?php include 'assets/footer.php';?>
 
     <script>
-        // Countdown timer
+        const electionDate = new Date("2025-02-09T20:30:00").getTime();
+        const countdownElement = document.getElementById("countdown");
+        const votingSection = document.getElementById("votingSection");
+        const resultsSection = document.getElementById("results");
+    
         function updateCountdown() {
-            const electionDate = new Date("2025-02-09T20:30:00").getTime();
             const now = new Date().getTime();
-            const timeLeft = electionDate - now;
-
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            document.getElementById("countdown").innerHTML = `${days} днів ${hours} годин ${minutes} хвилин ${seconds} секунд`;
+            const distance = electionDate - now;
+    
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+            countdownElement.innerHTML = days + "д " + hours + "г "
+            + minutes + "х " + seconds + "с ";
+    
+            if (distance < 0) {
+                clearInterval(x);
+                countdownElement.innerHTML = "Вибори розпочалися!";
+                votingSection.classList.remove("hidden");
+            }
         }
-
-        setInterval(updateCountdown, 1000);
+    
+        const x = setInterval(updateCountdown, 1000);
         updateCountdown();
+    
+        function vote(party) {
+            fetch('vote.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `party=${party}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Дякуємо за ваш голос!');
+                    location.reload();
+                } else {
+                    alert('Помилка: ' + data.message);
+                }
+            });
+        }
     </script>
 </body>
 </html>
