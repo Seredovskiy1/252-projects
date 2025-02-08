@@ -25,7 +25,7 @@ if ($last_claim && ($current_time - $last_claim) < 1800) { // 1800 секунд 
 }
 
 // Оновлення балансу та часу останньої винагороди
-$reward_amount = 1; // Наприклад, 10 Y-франків
+$reward_amount = 5; // Наприклад, 10 Y-франків
 $stmt = $pdo->prepare("UPDATE users SET balance_y = balance_y + ?, last_reward_claim = NOW() WHERE id = ?");
 $stmt->execute([$reward_amount, $user_id]);
 

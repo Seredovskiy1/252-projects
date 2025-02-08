@@ -26,30 +26,9 @@ $rates = json_decode($rates_json, true);
 $latest_rate = end($rates);
 $exchange_rate = $latest_rate['close'];
 
-function getTimeUntilNextReward($user_id) {
-    global $pdo;
-    $stmt = $pdo->prepare("SELECT last_reward_claim FROM users WHERE id = ?");
-    $stmt->execute([$user_id]);
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-    
-    $current_time = time();
-    
-    if (!$result['last_reward_claim']) {
-        return 0; // Якщо користувач ніколи не отримував винагороду
-    }
-    
-    $last_claim = strtotime($result['last_reward_claim']);
-    $next_claim_time = $last_claim + 1800; // 30 хвилин в секундах
-    
-    if ($current_time >= $next_claim_time) {
-        return 0; // Можна отримати винагороду
-    }
-    
-    return $next_claim_time - $current_time; // Час, що залишився до наступної винагороди
-}
 
-$time_until_next_reward = getTimeUntilNextReward($_SESSION['user_id']);
-$can_claim_reward = ($time_until_next_reward == 0);
+
+$can_claim_reward = true;
 
 ?>
 
@@ -83,21 +62,11 @@ $can_claim_reward = ($time_until_next_reward == 0);
 
             <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
                 <h2 class="text-2xl font-bold mb-4">Щоденна винагорода</h2>
-                <?php if ($can_claim_reward): ?>
-                    <form action="claim_reward.php" method="POST">
-                        <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                            <i class="fas fa-gift mr-2"></i> Отримати винагороду
-                        </button>
-                    </form>
-                <?php else: ?>
-                    <button class="bg-gray-500 text-white font-bold py-2 px-4 rounded-full cursor-not-allowed opacity-50">
-                        <i class="fas fa-hourglass-half mr-2"></i> Очікуйте наступної винагороди
+                <form action="claim_reward.php" method="POST">
+                    <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-gift mr-2"></i> Отримати винагороду
                     </button>
-                    <p class="mt-2 text-sm text-yellow-500">
-                        Наступна винагорода буде доступна через: 
-                        <span id="countdown"><?php echo gmdate("i:s", $time_until_next_reward); ?></span>
-                    </p>
-                <?php endif; ?>
+                </form>
                 <?php
                 if (isset($_SESSION['reward_message'])) {
                     echo '<p class="mt-2 text-sm ' . ($_SESSION['reward_success'] ? 'text-green-500' : 'text-red-500') . '">' . $_SESSION['reward_message'] . '</p>';
