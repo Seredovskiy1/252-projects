@@ -39,6 +39,16 @@ $isAuthorized = isset($_SESSION['user_id']);
             </div>
         </div>
 
+        <?php
+        // Додайте цей код перед формою торгівлі
+        if (isset($_SESSION['trade_error'])) {
+            echo '<div class="bg-red-500 text-white p-4 rounded-lg mt-4">';
+            echo htmlspecialchars($_SESSION['trade_error']);
+            echo '</div>';
+            unset($_SESSION['trade_error']);
+        }
+        ?>
+
         <?php if ($isAuthorized): ?>
             <div class="mt-8 bg-gray-800 rounded-lg p-6">
                 <h2 class="text-2xl font-bold mb-4">Торгівля Y-франком</h2>
@@ -47,20 +57,20 @@ $isAuthorized = isset($_SESSION['user_id']);
                         <div class="flex-1">
                             <label for="tradeType" class="block text-sm font-medium text-gray-400 mb-1">Операція</label>
                             <select id="tradeType" name="tradeType" class="w-full px-3 py-2 text-sm rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                                <option value="sell">Купити Y за $</option>
-                                <option value="buy">Купити $ за Y-франк</option>
+                                <option value="buy">Купити Y-франк за $</option>
+                                <option value="sell">Продати Y-франк за $</option>
                             </select>
                         </div>
                     </div>
                     <div id="amountSection">
-                        <label for="amount" class="block text-sm font-medium text-gray-400 mb-1">Сума</label>
+                        <label for="amount" class="block text-sm font-medium text-gray-400 mb-1">Сума для обміну</label>
                         <div class="relative">
                             <input type="number" id="amount" name="amount" min="0" step="0.01" class="w-full px-3 py-2 text-sm rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Введіть суму">
                             <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 text-sm" id="amountCurrency">$</span>
                         </div>
                     </div>
                     <div>
-                        <label for="resultAmount" class="block text-sm font-medium text-gray-400 mb-1">Результат операції</label>
+                        <label for="resultAmount" class="block text-sm font-medium text-gray-400 mb-1">Сума до отримання</label>
                         <div class="relative">
                             <input type="number" id="resultAmount" name="resultAmount" class="w-full px-3 py-2 text-sm rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Результат операції" readonly>
                             <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 text-sm" id="resultCurrency">Y</span>
@@ -71,6 +81,7 @@ $isAuthorized = isset($_SESSION['user_id']);
                             Підтвердити операцію
                         </button>
                     </div>
+                    
                 </form>
             </div>
         <?php endif; ?>
@@ -84,46 +95,46 @@ $isAuthorized = isset($_SESSION['user_id']);
     <script src="js/currency.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const tradeType = document.getElementById('tradeType');
-            const amount = document.getElementById('amount');
-            const amountCurrency = document.getElementById('amountCurrency');
-            const resultAmount = document.getElementById('resultAmount');
-            const resultCurrency = document.getElementById('resultCurrency');
+        const tradeType = document.getElementById('tradeType');
+        const amount = document.getElementById('amount');
+        const amountCurrency = document.getElementById('amountCurrency');
+        const resultAmount = document.getElementById('resultAmount');
+        const resultCurrency = document.getElementById('resultCurrency');
 
-            function updateCurrencies() {
+        function updateCurrencies() {
+            if (tradeType.value === 'buy') {
+                amountCurrency.textContent = '$';
+                resultCurrency.textContent = 'Y';
+            } else {
+                amountCurrency.textContent = 'Y';
+                resultCurrency.textContent = '$';
+            }
+        }
+
+        function calculateResult() {
+            const rate = parseFloat(document.getElementById('currentRate').textContent);
+            const inputAmount = parseFloat(amount.value);
+            if (!isNaN(inputAmount) && !isNaN(rate)) {
                 if (tradeType.value === 'buy') {
-                    amountCurrency.textContent = '$';
-                    resultCurrency.textContent = 'Y';
+                    resultAmount.value = (inputAmount * rate).toFixed(2);
                 } else {
-                    amountCurrency.textContent = 'Y';
-                    resultCurrency.textContent = '$';
+                    resultAmount.value = (inputAmount / rate).toFixed(2);
                 }
+            } else {
+                resultAmount.value = '';
             }
+        }
 
-            function calculateResult() {
-                const rate = parseFloat(document.getElementById('currentRate').textContent);
-                const inputAmount = parseFloat(amount.value);
-                if (!isNaN(inputAmount) && !isNaN(rate)) {
-                    if (tradeType.value === 'buy') {
-                        resultAmount.value = (inputAmount / rate).toFixed(2);
-                    } else {
-                        resultAmount.value = (inputAmount * rate).toFixed(2);
-                    }
-                } else {
-                    resultAmount.value = '';
-                }
-            }
-
-            tradeType.addEventListener('change', function() {
-                updateCurrencies();
-                calculateResult();
-            });
-
-            amount.addEventListener('input', calculateResult);
-
-            // Initial setup
+        tradeType.addEventListener('change', function() {
             updateCurrencies();
+            calculateResult();
         });
+
+        amount.addEventListener('input', calculateResult);
+
+        // Initial setup
+        updateCurrencies();
+    });
     </script>
 </body>
 </html>

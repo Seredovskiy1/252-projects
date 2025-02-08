@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Час створення: Лют 07 2025 р., 23:18
+-- Час створення: Лют 08 2025 р., 20:04
 -- Версія сервера: 10.4.32-MariaDB
 -- Версія PHP: 8.2.12
 
@@ -65,8 +65,8 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `balance_usd` decimal(10,2) DEFAULT 0.00,
-  `balance_y` decimal(10,2) DEFAULT 0.00,
+  `balance_usd` decimal(10,8) DEFAULT 0.00000000,
+  `balance_y` decimal(10,8) DEFAULT 0.00000000,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `last_reward_claim` datetime DEFAULT NULL
@@ -77,9 +77,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `balance_usd`, `balance_y`, `created_at`, `updated_at`, `last_reward_claim`) VALUES
-(3, 'iurii', '$2y$10$BcBr.2hX8urTGAn7.DiCtOeX3TEGEwTqiLC773jxGFh9CRXb373ey', 'iurii@gmail.com', 86977705.58, 99949603.20, '2025-02-07 17:49:10', '2025-02-07 21:47:41', NULL),
-(4, 'test', '$2y$10$kbTalJEsoTZB5DaFx0PlGOZwsLxz1vZspnd/o/gJdMl3.HYI8MZzO', 'test@gmail.com', 9790.00, 20919.80, '2025-02-07 20:01:43', '2025-02-07 20:07:33', NULL),
-(5, 'test2', '$2y$10$0bNCZ9rFv35gs6MVR5jec.tRNGmueUEx7yUjogOv0KkOUYEjj2pfS', 'test2@gmail.com', 100.00, 190101.00, '2025-02-07 21:56:09', '2025-02-07 22:17:14', '2025-02-07 22:17:14');
+(3, 'iurii', '$2y$10$BcBr.2hX8urTGAn7.DiCtOeX3TEGEwTqiLC773jxGFh9CRXb373ey', 'iurii@gmail.com', 36.16000000, 0.99000000, '2025-02-07 17:49:10', '2025-02-08 18:19:04', NULL),
+(4, 'test', '$2y$10$kbTalJEsoTZB5DaFx0PlGOZwsLxz1vZspnd/o/gJdMl3.HYI8MZzO', 'test@gmail.com', 99.99999999, 99.99999999, '2025-02-07 20:01:43', '2025-02-07 20:07:33', NULL),
+(5, 'test2', '$2y$10$0bNCZ9rFv35gs6MVR5jec.tRNGmueUEx7yUjogOv0KkOUYEjj2pfS', 'test2@gmail.com', 99.99999999, 99.99999999, '2025-02-07 21:56:09', '2025-02-07 22:17:14', '2025-02-07 22:17:14'),
+(6, 'toffex', '$2y$10$wYx4hlfabfdoOEJF2QV2yOrtC/Ncrk/TRsrIlwBKk.ZziQ/bZA.ia', 'toffex@gmail.com', 99.99999999, 99.99999999, '2025-02-07 22:24:53', '2025-02-07 22:24:53', NULL);
 
 --
 -- Індекси збережених таблиць
@@ -127,7 +128,7 @@ ALTER TABLE `transactions`
 -- AUTO_INCREMENT для таблиці `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Обмеження зовнішнього ключа збережених таблиць
